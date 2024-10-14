@@ -5,13 +5,20 @@ import br.com.fiap.entregas.model.StatusEntrega;
 
 import java.time.LocalDate;
 
-public record EntregaExibicaoDto(
-        Long numeroEntrega,
-        Long numeroPedido,
-        String nomeEntregador,
-        StatusEntrega statusEntrega,
-        LocalDate dataEntrega
-) {
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+
+@Getter
+@AllArgsConstructor
+public class EntregaExibicaoDto {
+    private final Long numeroEntrega;
+    private final Long numeroPedido;
+    private final String nomeEntregador;
+    private final StatusEntrega statusEntrega;
+    private final LocalDate dataEntrega;
+
+    // Construtor que recebe uma Entrega
     public EntregaExibicaoDto(Entrega entrega) {
         this(
                 entrega.getNumeroEntrega(),
@@ -22,3 +29,4 @@ public record EntregaExibicaoDto(
         );
     }
 }
+
