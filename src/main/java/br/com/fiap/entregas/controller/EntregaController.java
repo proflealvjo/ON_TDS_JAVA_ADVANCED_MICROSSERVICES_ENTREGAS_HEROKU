@@ -46,11 +46,12 @@ public class EntregaController {
         return ResponseEntity.ok(service.buscarPorNumero(numeroEntrega));
     }
 
+    /*
     @GetMapping
     public ResponseEntity<List<EntregaExibicaoDto>> listarTodasAsEntregas(){
         return ResponseEntity.ok(service.listarTodasAsEntregas());
     }
-
+*/
     @DeleteMapping("{numeroEntrega}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void excluir(@PathVariable Long numeroEntrega){

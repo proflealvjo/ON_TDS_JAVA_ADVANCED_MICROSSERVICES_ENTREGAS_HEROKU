@@ -35,7 +35,7 @@ public class EntregaService {
             throw new EntregaNaoEncotradaException("Entrega não encontrada!");
         }
     }
-
+/*
     public List<EntregaExibicaoDto> listarTodasAsEntregas() {
         return entregaRepository
                 .findAll()
@@ -43,6 +43,8 @@ public class EntregaService {
                 .map(EntregaExibicaoDto::new)
                 .toList();
     }
+    */
+
 
     public void excluir(Long numeroEntrega) {
         Optional<Entrega> entregaOptional = entregaRepository.findById(numeroEntrega);
